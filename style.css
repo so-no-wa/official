@@ -1,0 +1,75 @@
+/* 基本のスタイル設定 */
+body {
+    margin: 0;
+    font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+    background-color: #f7f3eb; /* アイボリー背景 */
+    color: #2a2a2a;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* ヘッダーとメニュー */
+header {
+    background-color: #f7f3eb;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0dcd4;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* ナビゲーションリンク */
+nav a {
+    margin: 0 18px;
+    text-decoration: none;
+    color: #2a2a2a;
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+}
+
+/* ナビホバー時の下線効果 */
+nav a::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    background: #2a2a2a;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ロゴとコピー部分 */
+.hero {
+    text-align: center;
+    padding: 80px 20px 50px;
+}
+
+.hero img {
+    max-width: 240px;
+    height: auto;
+}
+
+.tagline {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 24px;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+    color: #888;
+    border-top: 1px solid #e0dcd4;
+}
