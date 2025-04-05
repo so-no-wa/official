@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d4ee9fc36641807d52da654233a20e16e203d61d
 
 /* ----------------------------
   ベーススタイル
@@ -6,11 +10,25 @@ body {
     margin: 0;
     font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
     background-color: #f1eee2; /* アイボリー背景 */
+<<<<<<< HEAD
+=======
+=======
+/* 基本のスタイル設定 */
+body {
+    margin: 0;
+    font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+    background-color: #f7f3eb; /* アイボリー背景 */
+>>>>>>> 52ec9043508a2624876675dc758bddfa3c2ba59e
+>>>>>>> d4ee9fc36641807d52da654233a20e16e203d61d
     color: #2a2a2a;
     line-height: 1.8;
     font-size: 15px;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d4ee9fc36641807d52da654233a20e16e203d61d
 /* ----------------------------
   トップ（ロゴとキャッチ）
 ---------------------------- */
@@ -103,6 +121,15 @@ body {
 header {
     background-color: #f1eee2;
     padding: 20px 47px;
+<<<<<<< HEAD
+=======
+=======
+/* ヘッダーとメニュー */
+header {
+    background-color: #f7f3eb;
+    padding: 20px 60px;
+>>>>>>> 52ec9043508a2624876675dc758bddfa3c2ba59e
+>>>>>>> d4ee9fc36641807d52da654233a20e16e203d61d
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,6 +139,10 @@ header {
     z-index: 100;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d4ee9fc36641807d52da654233a20e16e203d61d
 .logo-text {
     height: 66px;
     width: 66px;
@@ -130,6 +161,14 @@ nav {
 nav a {
     border-bottom: none;
     padding: 4px 6px;
+<<<<<<< HEAD
+=======
+=======
+/* ナビゲーションリンク */
+nav a {
+    margin: 0 18px;
+>>>>>>> 52ec9043508a2624876675dc758bddfa3c2ba59e
+>>>>>>> d4ee9fc36641807d52da654233a20e16e203d61d
     text-decoration: none;
     color: #2a2a2a;
     font-weight: 500;
@@ -137,6 +176,13 @@ nav a {
     position: relative;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+/* ナビホバー時の下線効果 */
+>>>>>>> 52ec9043508a2624876675dc758bddfa3c2ba59e
+>>>>>>> d4ee9fc36641807d52da654233a20e16e203d61d
 nav a::after {
     content: '';
     display: block;
@@ -153,6 +199,10 @@ nav a:hover::after {
     width: 100%;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d4ee9fc36641807d52da654233a20e16e203d61d
 /* ----------------------------
   フッター（リンク＋コピー）
 ---------------------------- */
@@ -219,3 +269,105 @@ footer {
   color: #2a6f6f;
   text-decoration: underline;
 }
+<<<<<<< HEAD
+=======
+
+
+/* === レスポンシブ対応（768px以下のデバイス向け） === */
+@media screen and (max-width: 768px) {
+
+  /* ナビゲーションを縦並びに */
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* ロゴのサイズを少し小さく */
+  .logo {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /* ナビゲーションメニューのリストを縦並びに */
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 8px;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  /* フッターの文字を少し小さく中央揃えに */
+  footer {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* トップページ本文の余白と文字サイズを調整 */
+  .top-content {
+    padding: 40px 20px;
+    font-size: 15px;
+  }
+
+  /* 商品一覧を1カラムに */
+  .product-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .product-card {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* セクション類のパディング調整 */
+  .section,
+  .contact-section,
+  .privacy-policy,
+  .tokusho-section {
+    padding: 30px 16px;
+    margin: 40px auto;
+  }
+
+  /* セクションタイトルのフォントサイズを調整 */
+  .privacy-policy h1,
+  .contact-section h2,
+  .tokusho-section h1 {
+    font-size: 20px;
+  }
+
+  /* ボタンを画面幅に合わせて広げる */
+  .contact-button {
+    width: 90%;
+  }
+=======
+/* ロゴとコピー部分 */
+.hero {
+    text-align: center;
+    padding: 80px 20px 50px;
+}
+
+.hero img {
+    max-width: 240px;
+    height: auto;
+}
+
+.tagline {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 24px;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+    color: #888;
+    border-top: 1px solid #e0dcd4;
+>>>>>>> 52ec9043508a2624876675dc758bddfa3c2ba59e
+}
+>>>>>>> d4ee9fc36641807d52da654233a20e16e203d61d
