@@ -1,0 +1,294 @@
+
+/* ----------------------------
+  ベーススタイル
+---------------------------- */
+body {
+    margin: 0;
+    font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+    background-color: #f1eee2; /* アイボリー背景 */
+    color: #2a2a2a;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* ----------------------------
+  トップ（ロゴとキャッチ）
+---------------------------- */
+.hero {
+    text-align: center;
+    padding: 80px 20px 50px;
+}
+
+.hero img {
+    max-width: 240px;
+    height: auto;
+}
+
+.tagline {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 24px;
+}
+
+/* ----------------------------
+  メッセージセクション
+---------------------------- */
+.message-section {
+    background-color: #f1eee2;
+    color: #000;
+    padding: 80px 20px;
+    text-align: left;
+    font-family: 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.message-section .inner {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.message-section h2 {
+    font-size: 20px;
+    color: #d6bb8c;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+}
+
+.message-section p.sub {
+    font-size: 17px;
+    color: #c7542e;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+}
+
+.message-section p {
+    margin-bottom: 24px;
+}
+
+/* ----------------------------
+  Instagramサムネ
+---------------------------- */
+.insta-section {
+    text-align: center;
+    margin: 60px auto 40px;
+}
+
+.insta-title {
+    font-size: 1.2em;
+    color: #2a2a2a;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.insta-thumbnail {
+    width: 160px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.9;
+}
+
+.insta-thumbnail:hover {
+    transform: scale(1.04);
+    opacity: 1;
+}
+
+/* ----------------------------
+  ヘッダー（ロゴ＋メニュー）
+---------------------------- */
+header {
+    background-color: #f1eee2;
+    padding: 20px 47px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0dcd4;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-text {
+    height: 66px;
+    width: 66px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+/* ナビゲーションリンク */
+nav {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+nav a {
+    border-bottom: none;
+    padding: 4px 6px;
+    text-decoration: none;
+    color: #2a2a2a;
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    background: #2a2a2a;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ----------------------------
+  フッター（リンク＋コピー）
+---------------------------- */
+footer {
+    background-color: #f1eee2;
+    border-top: 1px solid #e0dcd4;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.footer-links {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #333;
+}
+
+
+/* ----------------------------
+  お問い合わせセクション（共通化）
+---------------------------- */
+.contact-section {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  background-color: #fdfbf5;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.contact-section h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #b47a58;
+  letter-spacing: 1px;
+}
+
+.contact-description {
+  margin-bottom: 14px;
+}
+
+/* リンクカラー */
+.contact-section a {
+  color: #2a6f6f;
+  text-decoration: underline;
+}
+
+
+/* === レスポンシブ対応（768px以下のデバイス向け） === */
+@media screen and (max-width: 768px) {
+
+  /* ナビゲーションを縦並びに */
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* ロゴのサイズを少し小さく */
+  .logo {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /* ナビゲーションメニューのリストを縦並びに */
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 8px;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  /* フッターの文字を少し小さく中央揃えに */
+  footer {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* トップページ本文の余白と文字サイズを調整 */
+  .top-content {
+    padding: 40px 20px;
+    font-size: 15px;
+  }
+
+  /* 商品一覧を1カラムに */
+  .product-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .product-card {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* セクション類のパディング調整 */
+  .section,
+  .contact-section,
+  .privacy-policy,
+  .tokusho-section {
+    padding: 30px 16px;
+    margin: 40px auto;
+  }
+
+  /* セクションタイトルのフォントサイズを調整 */
+  .privacy-policy h1,
+  .contact-section h2,
+  .tokusho-section h1 {
+    font-size: 20px;
+  }
+
+  /* ボタンを画面幅に合わせて広げる */
+  .contact-button {
+    width: 90%;
+  }
+}
