@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /* ----------------------------
   ベーススタイル
@@ -6,11 +7,19 @@ body {
     margin: 0;
     font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
     background-color: #f1eee2; /* アイボリー背景 */
+=======
+/* 基本のスタイル設定 */
+body {
+    margin: 0;
+    font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+    background-color: #f7f3eb; /* アイボリー背景 */
+>>>>>>> 52ec9043508a2624876675dc758bddfa3c2ba59e
     color: #2a2a2a;
     line-height: 1.8;
     font-size: 15px;
 }
 
+<<<<<<< HEAD
 /* ----------------------------
   トップ（ロゴとキャッチ）
 ---------------------------- */
@@ -103,6 +112,12 @@ body {
 header {
     background-color: #f1eee2;
     padding: 20px 47px;
+=======
+/* ヘッダーとメニュー */
+header {
+    background-color: #f7f3eb;
+    padding: 20px 60px;
+>>>>>>> 52ec9043508a2624876675dc758bddfa3c2ba59e
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,6 +127,7 @@ header {
     z-index: 100;
 }
 
+<<<<<<< HEAD
 .logo-text {
     height: 66px;
     width: 66px;
@@ -130,6 +146,11 @@ nav {
 nav a {
     border-bottom: none;
     padding: 4px 6px;
+=======
+/* ナビゲーションリンク */
+nav a {
+    margin: 0 18px;
+>>>>>>> 52ec9043508a2624876675dc758bddfa3c2ba59e
     text-decoration: none;
     color: #2a2a2a;
     font-weight: 500;
@@ -137,6 +158,10 @@ nav a {
     position: relative;
 }
 
+<<<<<<< HEAD
+=======
+/* ナビホバー時の下線効果 */
+>>>>>>> 52ec9043508a2624876675dc758bddfa3c2ba59e
 nav a::after {
     content: '';
     display: block;
@@ -153,6 +178,7 @@ nav a:hover::after {
     width: 100%;
 }
 
+<<<<<<< HEAD
 /* ----------------------------
   フッター（リンク＋コピー）
 ---------------------------- */
@@ -291,4 +317,30 @@ footer {
   .contact-button {
     width: 90%;
   }
+=======
+/* ロゴとコピー部分 */
+.hero {
+    text-align: center;
+    padding: 80px 20px 50px;
+}
+
+.hero img {
+    max-width: 240px;
+    height: auto;
+}
+
+.tagline {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 24px;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+    color: #888;
+    border-top: 1px solid #e0dcd4;
+>>>>>>> 52ec9043508a2624876675dc758bddfa3c2ba59e
 }
