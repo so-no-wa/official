@@ -1,20 +1,29 @@
-
-<!-- ヘッダー（ロゴ＋ナビゲーション） -->
+<link href="header.css" rel="stylesheet"/>
 <header>
-  <div class="logo">
-    <!-- トップページへのリンク付きロゴ画像 -->
-    <a href="index.html">
-      <img src="images/home.logo.png" alt="想の環 ロゴ" class="logo-text" />
-    </a>
-  </div>
-
-  <!-- ナビゲーションメニュー -->
-  <nav>
-    <a href="index.html">ホーム</a>
-    <a href="purchase.html">商品一覧</a>
-    <a href="privacy.html">プライバシーポリシー</a>
-    <a href="terms.html">利用規約</a>
-    <a href="contact.html">お問い合わせ</a>
-    <a href="tokusho.html">特定商取引法</a>
-  </nav>
+<div class="logo">
+<a href="index.html">
+<img alt="想の環 ロゴ" src="images/home.logo.png"/>
+</a>
+</div>
+<div class="menu-toggle" id="menu-toggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav id="nav-menu">
+<a href="index.html">ホーム</a>
+<!-- <a href="concept.html">コンセプト</a> -->
+<!-- <a href="purchase.html">商品</a> -->
+<a href="purchase.html">商品一覧</a>
+<a href="contact.html">お問い合わせ</a>
+<!-- <a href="terms.html">利用規約</a> -->
+<a href="privacy.html">プライバシーポリシー</a>
+<!-- <a href="tokusho.html">特定商取引法</a> -->
+</nav>
 </header>
+
+<script>
+  const script = document.createElement("script");
+  script.src = "script.js";
+  document.body.appendChild(script);
+</script>

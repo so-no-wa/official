@@ -1,58 +1,48 @@
-
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>特定商取引法に基づく表記 - 想の環</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="tokusho.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>特定商取引法に基づく表記 - 想の環</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="tokusho.css" rel="stylesheet"/>
 </head>
 <body>
-
-  <!-- ヘッダー読み込み -->
-  <div id="header-placeholder"></div>
-
-  <main>
-    <section class="tokusho-section">
-      <h1>特定商取引法に基づく表記</h1>
-
-      <dl>
-        <dt>販売者</dt>
-        <dd>ご請求があった際に遅延なく開示いたします。</dd>
-
-        <dt>所在地</dt>
-        <dd>ご請求があった際に遅延なく開示いたします。</dd>
-
-        <dt>連絡先</dt>
-        <dd>メール：<a href="mailto:so.no.wa.jp@gmail.com">so.no.wa.jp@gmail.com</a></dd>
-
-        <dt>販売価格</dt>
-        <dd>各商品ページに記載</dd>
-
-        <dt>商品代金以外の必要料金</dt>
-        <dd>送料（全国一律〇〇円）／振込手数料等</dd>
-
-        <dt>支払方法</dt>
-        <dd>銀行振込／その他ご案内する方法</dd>
-
-        <dt>支払時期</dt>
-        <dd>ご注文確定後、3日以内</dd>
-
-        <dt>引き渡し時期</dt>
-        <dd>入金確認後、7日以内に発送</dd>
-
-        <dt>返品・交換について</dt>
-        <dd>商品に欠陥がある場合を除き、基本的に返品には応じません。</dd>
-      </dl>
-    </section>
-  </main>
-
-  <!-- フッター読み込み -->
-  <div id="footer-placeholder"></div>
-
-  <!-- 共通スクリプト -->
-  <script>
+<!-- ヘッダー読み込み -->
+<div id="header-placeholder"></div>
+<main>
+<section class="tokusho-section">
+<h1>特定商取引法に基づく表記</h1>
+<dl>
+<dt>販売者</dt>
+<dd>ご請求があった際に遅延なく開示いたします。</dd>
+<dt>所在地</dt>
+<dd>
+  〒106-6237 東京都港区六本木三丁目2番1号 住友不動産六本木グランドタワー 37F BASE株式会社<br>
+  <span style="color: rgb(255, 125, 125);">※ネットショップ作成サービス「BASE」を運営しているBASE株式会社の所在地を記載しております。</span>
+</dd>
+<dt>連絡先</dt>
+<dd>メール：<a href="mailto:so.no.wa.jp@gmail.com">so.no.wa.jp@gmail.com</a></dd>
+<dt>販売価格</dt>
+<dd>各商品ページに記載</dd>
+<dt>商品代金以外の必要料金</dt>
+<dd>送料（全国一律〇〇円）／振込手数料等</dd>
+<dt>支払方法</dt>
+<dd>銀行振込／その他ご案内する方法</dd>
+<dt>支払時期</dt>
+<dd>ご注文確定後、3日以内</dd>
+<dt>引き渡し時期</dt>
+<dd>入金確認後、7日以内に発送</dd>
+<dt>返品・交換について</dt>
+<dd>商品に欠陥がある場合を除き、基本的に返品には応じません。</dd>
+</dl>
+</section>
+</main>
+<!-- フッター読み込み -->
+<div id="footer-placeholder"></div>
+<!-- 共通スクリプト -->
+<script>
     fetch("header.html")
       .then(res => res.text())
       .then(data => document.getElementById("header-placeholder").innerHTML = data);
@@ -61,5 +51,18 @@
       .then(res => res.text())
       .then(data => document.getElementById("footer-placeholder").innerHTML = data);
   </script>
+<script>
+  Promise.all([
+    fetch("header.html").then(res => res.text()),
+    fetch("footer.html").then(res => res.text())
+  ]).then(([header, footer]) => {
+    document.getElementById("header-placeholder").innerHTML = header;
+    document.getElementById("footer-placeholder").innerHTML = footer;
+
+    const script = document.createElement("script");
+    script.src = "script.js";
+    document.body.appendChild(script);
+  });
+</script>
 </body>
 </html>
