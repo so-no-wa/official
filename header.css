@@ -1,0 +1,76 @@
+/* ヘッダー全体 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1eee2;
+  padding: 10px 20px;
+  border-bottom: 1px solid #dcd7c9;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ロゴ画像 */
+.logo img {
+  height: 40px;
+}
+
+/* ナビゲーションリンク */
+#nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+/* ハンバーガーメニュー */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  width: 25px;
+  background: #2a2a2a;
+  transition: all 0.5s ease;
+}
+
+/* モバイル表示対応 */
+@media (max-width: 768px) {
+  #nav-menu {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    flex-direction: column;
+    background: #ede6cb;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: 0;
+    padding: 0 0;
+    border-top: 1px solid #e0dcd4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 0 0 12px 12px;
+    z-index: 999;
+    transition: max-height 0.6s ease-in-out, padding 0.5s ease, opacity 0.4s ease-in-out;
+  }
+
+  #nav-menu.active {
+    display: flex;
+    max-height: 800px;
+    padding: 20px 0;
+    opacity: 1;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  #nav-menu a {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,42 @@
+/* フッター全体 */
+footer {
+  background-color: #f7f3eb;
+  color: #2a2a2a;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  border-top: 1px solid #dcd7c9;
+}
+
+/* フッター内リンク */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #2a2a2a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* スマホ対応 */
+@media (max-width: 480px) {
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  footer {
+    font-size: 15px;
+    padding: 24px 12px;
+  }
+}
