@@ -74,3 +74,86 @@ header {
     font-size: 16px;
   }
 }
+
+
+
+/* =============================
+   高級感＆アニメーション付きヘッダー
+============================= */
+
+/* フェードスライドイン */
+header {
+  animation: slideFadeDown 0.8s ease forwards;
+}
+
+@keyframes slideFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ナビリンクの装飾 */
+#nav-menu a {
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  color: #2a2a2a;
+  transition: color 0.3s ease;
+}
+
+#nav-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #c2a27e;
+  transition: width 0.3s ease;
+}
+
+#nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* ロゴにホバーフェード */
+.logo img {
+  transition: opacity 0.3s ease;
+}
+
+.logo img:hover {
+  opacity: 0.8;
+}
+
+
+
+/* ロゴ＋ブランド名配置 */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-text {
+  text-decoration: none;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.4rem;
+  color: #5a4a42;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.logo-text:hover {
+  opacity: 0.7;
+}

@@ -231,3 +231,30 @@ footer {
 main {
   flex: 1;
 }
+
+
+/* ----------------------------
+  フェードインアニメーション & 高級感フォント
+---------------------------- */
+
+/* Google Fonts 使用 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+
+body {
+  font-family: 'Noto Serif JP', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+}
+
+.fadein-section {
+  animation: fadein 1.5s ease-in;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

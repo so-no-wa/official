@@ -1,48 +1,43 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>商品一覧 - 想の環</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="purchase.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>商品一覧 - 想の環</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="purchase.css" rel="stylesheet"/>
 </head>
 <body>
-
-  <!-- ヘッダー読み込み -->
-  <div id="header-placeholder"></div>
-
-  <!-- 商品一覧 -->
-  <main>
-    <section class="product-section">
-      <h2>一点ものアクセサリー</h2>
-      <p class="notice">※ご注文は順番に対応させていただきます。在庫がない場合もございます。</p>
-
-      <div class="product-grid">
-        <!-- 商品1 -->
-        <div class="product-card">
-          <img src="images/sample.jpg" alt="天然石アクセサリー">
-          <h3>Moonlight Stone</h3>
-          <p class="price">¥4,800（税込）</p>
-          <a href="https://tally.so/r/mJoja4" target="_blank" class="purchase-button">購入フォームへ</a>
-        </div>
-
-        <!-- 商品2（SOLD OUT） -->
-        <div class="product-card sold-out">
-          <img src="images/sample2.jpg" alt="天然石アクセサリー">
-          <h3>Sun Drop Quartz</h3>
-          <p class="price">¥5,200（税込）</p>
-          <span class="sold-out-label">SOLD OUT</span>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- フッター読み込み -->
-  <div id="footer-placeholder"></div>
-
-  <!-- 共通スクリプト -->
-  <script>
+<!-- ヘッダー読み込み -->
+<div id="header-placeholder"></div>
+<!-- 商品一覧 -->
+<main>
+<section class="product-section fadein-section">
+<h2>一点ものアクセサリー</h2>
+<p class="notice">※ご注文は順番に対応させていただきます。在庫がない場合もございます。</p>
+<div class="product-grid">
+<!-- 商品1 -->
+<div class="product-card">
+<img alt="天然石アクセサリー" src="images/sample.jpg"/>
+<h3>月の雫 - ピアス</h3><p class="description">ラブラドライト × Silver。静けさと直感をもたらす一点もの。</p>
+<p class="price">¥5,800（税込）</p>
+<a class="purchase-button" href="https://sounowa.base.shop/items/111111" target="_blank">購入する</a>
+<p class="sold-out">SOLD OUT</p></div>
+<!-- 商品2 -->
+<div class="product-card">
+  <img alt="天然石アクセサリー" src="images/sample.jpg"/>
+  <h3>陽の記憶 - ブレスレット</h3><p class="description">シトリン × Silver。前向きな力をくれる明るい光。</p>
+  <p class="price">¥8,800（税込）</p>
+  <a class="purchase-button" href="https://sounowa.base.shop/items/111111" target="_blank">購入する</a>
+  <p class="sold-out">SOLD OUT</p></div>
+</div>
+</section>
+</main>
+<!-- フッター読み込み -->
+<div id="footer-placeholder"></div>
+<!-- 共通スクリプト -->
+<script>
     fetch("header.html")
       .then(res => res.text())
       .then(data => document.getElementById("header-placeholder").innerHTML = data);
@@ -51,7 +46,6 @@
       .then(res => res.text())
       .then(data => document.getElementById("footer-placeholder").innerHTML = data);
   </script>
-
 <script>
   Promise.all([
     fetch("header.html").then(res => res.text()),
@@ -65,6 +59,5 @@
     document.body.appendChild(script);
   });
 </script>
-
 </body>
 </html>
