@@ -77,83 +77,31 @@ header {
 
 
 
-/* =============================
-   高級感＆アニメーション付きヘッダー
-============================= */
+/* フォント上品化 */
 
-/* フェードスライドイン */
-header {
-  animation: slideFadeDown 0.8s ease forwards;
-}
+/* 上品フォント構成：ブランド名に Playfair Display、ナビ＆本文に Noto Serif JP */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&family=Playfair+Display&display=swap');
 
-@keyframes slideFadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ナビリンクの装飾 */
-#nav-menu a {
-  position: relative;
-  text-decoration: none;
+header, header a, #nav-menu a,
+footer, footer a {
+  font-family: 'Noto Serif JP', serif;
   font-weight: 500;
-  font-size: 14px;
-  color: #2a2a2a;
-  transition: color 0.3s ease;
-}
-
-#nav-menu a::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  height: 2px;
-  width: 0;
-  background-color: #c2a27e;
-  transition: width 0.3s ease;
-}
-
-#nav-menu a:hover::after {
-  width: 100%;
-}
-
-/* ロゴにホバーフェード */
-.logo img {
-  transition: opacity 0.3s ease;
-}
-
-.logo img:hover {
-  opacity: 0.8;
+  letter-spacing: 0.04em;
+  color: #2c2c2c;
 }
 
 
-
-/* ロゴ＋ブランド名配置 */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
 
 .logo-text {
-  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #2c2c2c;
   white-space: nowrap;
+  text-decoration: none;
   display: flex;
   align-items: center;
-  height: 40px;
-  font-family: 'Noto Serif JP', serif;
-  font-size: 1.4rem;
-  color: #5a4a42;
-  letter-spacing: 0.1em;
-  font-weight: 600;
-  transition: opacity 0.3s ease;
+  height: 100%;
 }
 
-.logo-text:hover {
-  opacity: 0.7;
-}
+

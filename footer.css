@@ -40,3 +40,25 @@ footer {
     padding: 24px 12px;
   }
 }
+
+
+
+/* フォント上品化 */
+
+/* 上品フォント構成：ブランド名に Playfair Display、ナビ＆本文に Noto Serif JP */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&family=Playfair+Display&display=swap');
+
+header, header a, #nav-menu a,
+footer, footer a {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #2c2c2c;
+}
+
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #2c2c2c;
+}
