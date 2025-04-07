@@ -1,0 +1,70 @@
+
+/* prologue.css */
+
+/* Google Fonts 使用 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+
+body {
+  font-family: 'Noto Serif JP', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+  background-color: #f1eee2;
+  color: #333;
+  line-height: 2.2;
+  margin: 0;
+  padding: 0;
+}
+
+main.prologue {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
+  animation: fadein 1.5s ease-in;
+}
+
+main.prologue h1 {
+  font-size: 2em;
+  text-align: center;
+  color: #5a4a42;
+  padding-bottom: 0.5em;
+  position: relative;
+}
+
+main.prologue h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #c8bcae;
+  margin: 0.5em auto 0;
+}
+
+main.prologue p {
+  margin-bottom: 2.2em;
+  font-size: 1.1em;
+  letter-spacing: 0.05em;
+}
+
+main.prologue hr {
+  border: none;
+  border-top: 1px solid #d8d3c3;
+  width: 60%;
+  margin: 3em auto;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.soft-highlight {
+  color: #b75f51;
+  font-size: 1.12em;
+  font-weight: 500;
+}

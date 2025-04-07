@@ -94,3 +94,32 @@ body {
   margin-top: -20px;
   margin-bottom: 40px;
 }
+
+
+
+/* === 共通アニメーションとスタイル強化 === */
+
+/* Google Fonts 使用 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+
+body {
+  font-family: 'Noto Serif JP', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+  background-color: #f1eee2;
+  color: #333;
+  line-height: 2.2;
+}
+
+.fadein-section {
+  animation: fadein 1.5s ease-in;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
