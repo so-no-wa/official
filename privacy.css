@@ -1,0 +1,85 @@
+
+/* === プライバシーポリシー全体レイアウト === */
+.privacy-policy {
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  background-color: #fdfbf5;
+  border: 1px solid #e6e0d7;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+  color: #333;
+  line-height: 1.9;
+}
+
+.privacy-policy h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #b47a58;
+}
+
+.privacy-policy h2 {
+  font-size: 18px;
+  margin: 30px 0 15px;
+  color: #2a6f6f;
+}
+
+.privacy-policy p {
+  margin-bottom: 15px;
+}
+
+.privacy-policy ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.privacy-policy ul li {
+  margin-bottom: 8px;
+}
+
+/* メールアドレス装飾 */
+.contact-email a {
+  color: #2a6f6f;
+  background-color: #f1eee2;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.contact-email a:hover {
+  background-color: #2a6f6f;
+  color: #fff;
+}
+
+
+
+/* === 共通アニメーションとスタイル強化 === */
+
+/* Google Fonts 使用 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+
+body {
+  font-family: 'Noto Serif JP', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+  background-color: #f1eee2;
+  color: #333;
+  line-height: 2.2;
+}
+
+.fadein-section {
+  animation: fadein 1.5s ease-in;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

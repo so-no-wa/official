@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大切な人に対する想いの環 - 想の環</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="prologue.css">
+</head>
+<body>
+     <!-- ヘッダー読み込み -->
+  <div id="header-placeholder"></div>
+    <main class="prologue">
+        <section>
+            <h1>大切な人に対する想いの環</h1>
+            <p>「想の環」は、<br>
+            <span class="soft-highlight">たったひとつの大切な想い</span>から始まりました。</p>
+
+            <p>それは、<br>
+            もう一度だけ、<span class="soft-highlight">心を込めて向き合いたい</span>という願い。</p>
+
+            <p>大切な人に、<br>
+            <span class="soft-highlight">もう一度、伝えたい想い</span>がありました。</p>
+
+            <p>たとえその願いが届かなくても、<br>
+            その人に手渡せなくても、<br>
+            この想いを、なかったことにも、忘れたくも。</p>
+
+            <p>だから、<span class="soft-highlight">想いを形にする</span>ことを選び、<br>
+            たった一つ大切な人に贈るため、<br>
+            初めてカタチにできたのがきっかけです。</p>
+
+            <hr>
+
+            <p>「想の環」は、<br>
+            <span class="soft-highlight">誰かを大切に想い続ける人</span>の「想い（おもい）」を<br>
+            「環（わ）」にして形作れたらと思っています。</p>
+
+            <p>あなたにも、<br>
+            心のどこかにずっと残っている、<br>
+            あるいは今も思い続けたい、大切な人がいませんか？</p>
+
+            <p>言えなかった言葉、渡せなかった想い、<br>
+            それでも「大切だった」「大切だ」と<span class="soft-highlight">胸にある温かさ</span>。</p>
+
+            <p>その想いを、<span class="soft-highlight">そっと包み込む</span>ような<br>
+            アクセサリーでありたいです。</p>
+
+            <hr>
+
+            <p>大切な人への想いの環が、ちゃんと届きますように。<br>
+            大切に<span class="soft-highlight">心を込めて作ります</span>。</p>
+        </section>
+    </main>
+
+<!-- フッター読み込み -->
+<div id="footer-placeholder"></div>
+<!-- 共通スクリプト -->
+<script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+  </script>
+<script>
+  Promise.all([
+    fetch("header.html").then(res => res.text()),
+    fetch("footer.html").then(res => res.text())
+  ]).then(([header, footer]) => {
+    document.getElementById("header-placeholder").innerHTML = header;
+    document.getElementById("footer-placeholder").innerHTML = footer;
+
+    const script = document.createElement("script");
+    script.src = "script.js";
+    document.body.appendChild(script);
+  });
+</script>
+
+</body>
+</html>

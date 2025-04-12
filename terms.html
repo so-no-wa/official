@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>利用規約｜想の環 - Sō no Wa</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="terms.css" />
+</head>
+<body>
+
+  <!-- ヘッダー読み込み -->
+  <div id="header-placeholder"></div>
+
+  <!-- アコーディオン利用規約 -->
+  <section class="accordion-section fadein-section">
+    <h2>利用規約</h2>
+
+    <div class="accordion-item">
+      <button class="accordion-toggle">第1条：このご案内について</button>
+      <div class="accordion-content">
+        <p>この利用規約は、「想の環」がお届けするアクセサリーをご利用いただく際の大切なご案内です。どうぞご一読ください。</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-toggle">第2条：気持ちよくお取引するために</button>
+      <div class="accordion-content">
+        <p>安心してお取引いただくため、虚偽の情報のご入力や、第三者へのなりすましなどの行為はご遠慮いただいております。</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-toggle">第3条：作品についてのご理解</button>
+      <div class="accordion-content">
+        <p>天然石や素材の個体差、また写真と実物との微妙な違いが生じる場合がございます。それも一点ものの魅力としてお楽しみください。</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-toggle">第4条：このご案内の見直しについて</button>
+      <div class="accordion-content">
+        <p>より良いサービスのために、本規約の内容は予告なく変更させていただく場合がございます。最新の情報は本ページをご確認ください。</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-toggle">第5条：ご不明な点がございましたら</button>
+      <div class="accordion-content">
+        <p>内容に関してご質問やご相談がございましたら、お気軽にメールにてご連絡ください。心を込めてご対応いたします。</p>
+        <p class="contact-email">
+          メール：<a href="mailto:so.no.wa.jp@gmail.com">so.no.wa.jp@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター読み込み -->
+  <div id="footer-placeholder"></div>
+
+  <!-- 共通スクリプト（ヘッダー＆フッター） -->
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+  </script>
+
+  <!-- アコーディオン制御 -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".accordion-toggle").forEach(button => {
+        button.addEventListener("click", () => {
+          const content = button.nextElementSibling;
+          const allContents = document.querySelectorAll(".accordion-content");
+          allContents.forEach(item => {
+            if (item !== content) item.style.display = "none";
+          });
+          content.style.display = (content.style.display === "block") ? "none" : "block";
+        });
+      });
+    });
+  </script>
+
+<script>
+  Promise.all([
+    fetch("header.html").then(res => res.text()),
+    fetch("footer.html").then(res => res.text())
+  ]).then(([header, footer]) => {
+    document.getElementById("header-placeholder").innerHTML = header;
+    document.getElementById("footer-placeholder").innerHTML = footer;
+
+    const script = document.createElement("script");
+    script.src = "script.js";
+    document.body.appendChild(script);
+  });
+</script>
+
+</body>
+</html>

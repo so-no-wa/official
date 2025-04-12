@@ -1,0 +1,79 @@
+
+.contact-section {
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  background-color: #fdfbf5;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 22px;
+  color: #b47a58;
+  margin-bottom: 20px;
+}
+
+.contact-description {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+/* ボタン全体 */
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  margin-top: 32px;
+}
+
+/* 各ボタンのデザイン */
+.contact-button {
+  background-color: #e7dcd0;
+  color: #333;
+  padding: 10px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #d2c3b7;
+  color: #000;
+}
+
+
+
+/* === 共通アニメーションとスタイル強化 === */
+
+/* Google Fonts 使用 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+
+body {
+  font-family: 'Noto Serif JP', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+  background-color: #f1eee2;
+  color: #333;
+  line-height: 2.2;
+}
+
+.fadein-section {
+  animation: fadein 1.5s ease-in;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

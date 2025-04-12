@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="想の環は、天然石とシルバーアクセサリーを通して心を結ぶブランドです。">
+  <meta name="keywords" content="想の環,天然石アクセサリー,シルバー,ハンドメイド,ブレスレット,ギフト,お守り">
+  <meta name="author" content="想の環 - So no Wa">
+
+  <meta property="og:title" content="想の環 - 天然石とシルバーのアクセサリー">
+  <meta property="og:description" content="大切な想いをカタチにする、心を結ぶアクセサリー。">
+  <meta property="og:image" content="https://so-no-wa.github.io/official/images/logo_ogp.png">
+  <meta property="og:url" content="https://so-no-wa.github.io/official">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="想の環 - 天然石とシルバーアクセサリー">
+  <meta name="twitter:description" content="あなたの大切な想いを、そっとカタチにします。">
+  <meta name="twitter:image" content="https://so-no-wa.github.io/official/images/logo_ogp.png">
+
+  <title>想の環 - Sō no Wa</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="preloader_image.css" />
+</head>
+<body>
+
+<!-- プリローダー -->
+<div id="preloader">
+  <div class="preloader-inner">
+    <img src="images/logo_fadein.png" alt="想の環 ロゴ" class="logo-fadein">
+    <div class="preloader-message">心を結ぶ。</div>
+  </div>
+</div>
+
+  <!-- ヘッダーを読み込み -->
+  <div id="header-placeholder"></div>
+
+  <!-- メインエリア -->
+  <main>
+    <section class="hero fadein-section">
+      <img src="images/logo_.png" alt="想の環 ロゴ" />
+      <div class="tagline">心を結ぶ、天然石と貴金属のアクセサリー。</div>
+    </section>
+
+    <section class="message-section fadein-section">
+      <div class="inner">
+        <h2>MESSAGE</h2>
+        <p class="sub">想い</p>
+        <p>心を結ぶ、天然石と貴金属のアクセサリー。</p>
+        <p>天然石ひとつひとつには「石言葉」と呼ばれる意味があります。</p>
+        <p>それはまるで、自然が長い年月をかけて宿した、目には見えない手紙のよう。</p>
+        <p>愛、癒し、直感、浄化、強さ――</p>
+        <p>それぞれの石が持つメッセージは、きっと今のあなたに寄り添うはずです。</p>
+        <p>その石の声を、静かに、けれど確かに伝えるために。</p>
+        <p>私たちは、silverという素材を選びました。</p>
+        <p>silverは、月のように静かに輝きながら、使う人とともに表情を変えていく金属。</p>
+        <p>その柔らかさとあたたかみは、石の個性を引き立て、手元に馴染む優しい存在になります。</p>
+        <p>石と言葉、そしてsilver。</p>
+        <p>三つの想いを結ぶことで、「想の環」は生まれます。</p>
+      </div>
+    </section>
+
+    <section class="insta-section fadein-section">
+      <h2 class="insta-title">Instagram</h2>
+      <a href="https://www.instagram.com/so.no.wa" target="_blank" rel="noopener noreferrer">
+        <img src="images/E53DCF5B-8424-41A6-94BD-9FB0CBFE4A2D.PNG" alt="Instagram投稿" class="insta-thumbnail" />
+      </a>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <div id="footer-placeholder"></div>
+
+  <!-- 読み込みスクリプト -->
+  <script>
+    window.addEventListener("load", () => {
+      Promise.all([
+        fetch("header.html").then(res => res.text()),
+        fetch("footer.html").then(res => res.text())
+      ]).then(([headerData, footerData]) => {
+        document.getElementById("header-placeholder").innerHTML = headerData;
+        document.getElementById("footer-placeholder").innerHTML = footerData;
+
+        // 外部JSの読み込み
+        const mainScript = document.createElement("script");
+        mainScript.src = "script.js";
+        document.body.appendChild(mainScript);
+
+        // プリローダーの処理
+        const preloader = document.getElementById("preloader");
+        if (preloader) {
+          setTimeout(() => {
+            preloader.style.transition = "opacity 1s ease";
+            preloader.style.opacity = "0";
+            setTimeout(() => {
+              preloader.style.display = "none";
+            }, 1000);
+          }, 3500);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
