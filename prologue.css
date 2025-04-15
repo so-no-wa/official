@@ -1,4 +1,3 @@
-
 /* prologue.css */
 
 /* Google Fonts 使用 */
@@ -67,4 +66,10 @@ main.prologue hr {
   color: #b75f51;
   font-size: 1.12em;
   font-weight: 500;
+}
+
+/* 強調表示 */
+.highlight {
+  color: #c7432b;
+  font-weight: bold;
 }
