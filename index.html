@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>想の環</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 第一プリローダー：葉っぱアニメーションなど -->
+  <div id="preloader">
+    <div class="sakura"></div>
+    <div class="ripple"></div>
+    <div class="surface-ripple-wrapper">
+      <div class="ripple-ring ring1"></div>
+      <div class="ripple-ring ring2"></div>
+      <div class="ripple-ring ring3"></div>
+    </div>
+  </div>
+
+  <!-- 第二プリローダー：ロゴ画像による演出 -->
+  <div id="second-preloader">
+    <img src="images/rogo_1.PNG" alt="ロゴ" id="second-logo">
+  </div>
+
+  <!-- メインコンテンツの表示先 -->
+  <div id="main-container" class="hidden"></div>
+
+  <!-- スクリプト -->
+  <script src="script.js"></script>
+</body>
+</html>

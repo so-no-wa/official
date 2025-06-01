@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<title>想の環 -home- </title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="main.css" rel="stylesheet"/>
+<script src="script.js"></script>
+</head>
+<body>
+<header class="header">
+<a class="logo-header" href="main.html">想の環</a>
+
+<div class="hamburger" onclick="document.querySelector('.header nav').classList.toggle('active')">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav>
+<ul>
+<li><a href="main.html">ホーム</a></li>
+<li><a href="product.html">商品一覧</a></li>
+<li><a href="https://thebase.com/inquiry/sounowa-base-shop">お問い合わせ</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<div class="slideshow">
+<img class="slide show" src="images/img1.jpg"/>
+<img class="slide" src="images/img2.jpg"/>
+<img class="slide" src="images/img3.jpg"/>
+<img class="slide" src="images/img4.jpg"/>
+</div>
+<section style="padding: 4rem 1rem; text-align: center;">
+<h2>MESSAGE</h2>
+<p>想の環は、日常に小さな特別をもたらすアクセサリーブランドです。</p>
+<p>自然や想いをモチーフにした繊細なデザインで、<br/>あなたの個性を引き立てます。</p>
+<p>ぜひ、ひとつひとつの作品に込められた物語を感じてみてください。</p>
+</section>
+</main>
+
+<footer class="footer">
+<div class="footer-info">
+<p>» 想の環 «</p>
+<p>〒106-6237 東京都港区六本木三丁目2番1号<br/>住友不動産六本木グランドタワー 37F BASE株式会社</p>
+<p>TEL: 03-6441-3835</p>
+<p>3-2-1, ROPPONGI, MINATO-KU, TOKYO, 106-6237, JAPAN</p>
+<p class="note">※ネットショップ作成サービス「BESE」を運営しているBASE株式会社の連絡先を記載しております。<br/>
+        返品などのご相談は、<a href="https://thebase.com/inquiry/sounowa-base-shop">こちら</a>からお問い合わせください。
+    </p></div>
+<div class="footer-icons">
+<a href="https://www.Instagram.com/so.no.wa"><img alt="Instagram" src="images/Instagram.PNG"/></a>
+<a href="#"><img alt="Facebook" src="icons/facebook.svg"/></a>
+<a href="#"><img alt="Note" src="icons/note.svg"/></a>
+</div>
+<p class="footer-tagline">» THE ART OF WEAR «</p>
+<p class="footer-copy">COPYRIGHT (C) 2025 SO NO WA ALL RIGHTS RESERVED.</p>
+</footer>
+</body>
+</html>
+
+<script>
+const slides = document.querySelectorAll('.slideshow .slide');
+let current = 0;
+if (slides.length > 0) {
+  slides[current].classList.add('show');
+  setInterval(() => {
+    slides[current].classList.remove('show');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('show');
+  }, 5000);
+}
+</script>

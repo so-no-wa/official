@@ -1,0 +1,187 @@
+#main-container {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+/* 全体初期設定 */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  font-family: serif;
+}
+
+/* 第一プリローダー（葉っぱ＋波紋） */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('/images/Preloader_colour.PNG');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  transition: opacity 1.5s ease-in-out;
+}
+#preloader.fade-out {
+  opacity: 0;
+}
+
+/* 桜の葉が落ちるアニメーション */
+.sakura {
+  width: 40px;
+  height: 40px;
+  background-image: url('/images/Preloader_animation.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  animation:
+    sakuraFall 3.5s ease-in-out forwards,
+    sakuraFade 2s ease-out forwards,
+    afterRipple 1s ease-in-out 3.5s 1;
+}
+
+@keyframes sakuraFall {
+  0% { top: -60px; left: 50%; transform: rotate(0deg); opacity: 0; }
+  10% { left: 55%; transform: rotate(15deg); opacity: 1; }
+  30% { left: 45%; transform: rotate(-15deg); }
+  50% { left: 57%; transform: rotate(10deg); }
+  70% { left: 43%; transform: rotate(-10deg); }
+  100% { top: 45%; left: 50%; transform: rotate(5deg); opacity: 1; }
+}
+
+@keyframes afterRipple {
+  0%   { transform: translateY(0px) rotate(5deg); }
+  25%  { transform: translateY(-4px) rotate(4deg); }
+  50%  { transform: translateY(2px) rotate(6deg); }
+  75%  { transform: translateY(-1px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(5deg); }
+}
+
+/* 単発波紋のエフェクト */
+.ripple {
+  position: absolute;
+  top: 48%;
+  left: 55%;
+  width: 80px;
+  height: 80px;
+  border: 2px solid rgba(180, 180, 180, 0.4);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.2);
+  opacity: 0;
+  animation: rippleExpand 1.8s ease-out 3.5s forwards;
+}
+
+@keyframes rippleExpand {
+  0% { transform: translate(-50%, -50%) scale(0.2); opacity: 0; }
+  30% { opacity: 0.4; }
+  100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; }
+}
+
+/* 表面波紋（同心円） */
+.surface-ripple-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.ripple-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(180,180,180,0.15) 0%, transparent 70%);
+  transform: translate(-50%, -50%) scale(0.2);
+  opacity: 0;
+}
+.ring1 { animation: surfacePulse 2.8s ease-out 3.5s forwards; }
+.ring2 { animation: surfacePulse 2.8s ease-out 4.0s forwards; }
+.ring3 { animation: surfacePulse 2.8s ease-out 4.5s forwards; }
+
+@keyframes surfacePulse {
+  0%   { transform: translate(-50%, -50%) scale(0.2); opacity: 0; }
+  20%  { opacity: 0.3; }
+  100% { transform: translate(-50%, -50%) scale(3.5); opacity: 0; }
+}
+
+/* 第二プリローダー（画像背景） */
+#second-preloader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("images/IMG_3633.AVIF") center center / cover no-repeat;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.5s ease-in-out;
+}
+#second-preloader.fade-out {
+  opacity: 0;
+}
+
+/* メインコンテンツのフェードイン */
+.fade-in {
+  opacity: 0;
+  animation: fadeMain 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeMain {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* 第二プリローダー内ロゴ画像フェードイン＆サイズ調整 */
+#second-logo {
+  opacity: 0;
+  animation: fadeLogo 2s ease-in-out forwards;
+  max-width: 30%;
+  height: auto;
+}
+
+@keyframes fadeLogo {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* 第二プリローダーのフェードアウトをより滑らかに */
+#second-preloader.fade-out {
+  animation: fadeOutSmooth 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeOutSmooth {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* main-container に対するフェードイン */
+#main-container.fade-in {
+  animation: fadeInMain 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInMain {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.preloader-wrapper.hidden {
+  display: none !important;
+}
