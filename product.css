@@ -379,3 +379,41 @@ a[href="product.html"], header nav {
   align-items: center;
   text-align: center;
 }
+
+/* 写真＋説明＋購入ボタンレスポンシブ */
+@media screen and (max-width: 768px) {
+  .product-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .product-image {
+    width: 40%;
+  }
+
+  .product-info {
+    width: 55%;
+    margin-left: 15%; /* ← 画像との間隔を%で */
+  }
+
+  .buy-button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+  }
+}
+
+
+
+
